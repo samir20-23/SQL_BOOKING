@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    /* General Styles */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f7f7f7;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    #allform {
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 600px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    #add_form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    /* Form Elements */
+    input[type="text"],
+    input[type="number"],
+    textarea,
+    select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 16px;
+      transition: border-color 0.3s;
+    }
+
+    input[type="text"]:focus,
+    input[type="number"]:focus,
+    textarea:focus,
+    select:focus {
+      border-color: #007bff;
+      outline: none;
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    input[type="submit"] {
+      background-color: #007bff;
+      color: white;
+      padding: 15px;
+      border: none;
+      border-radius: 4px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #0056b3;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: 16px;
+      color: #333;
+    }
+
+    /* Error Messages */
+    span[id^="err"] {
+      color: red;
+      font-size: 14px;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      #allform {
+        padding: 15px;
+      }
+
+      form {
+        gap: 15px;
+      }
+
+      #add_form {
+        gap: 10px;
+      }
+    }
+    #grop {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+    }
+  </style>
+  <body>
+    <div id="allform">
+      <form action="formreserves.php" method="post">
+        <div id="add_form">
+          <div id="grop">
+            <h2>Name</h2>
+            <h2>Eamil</h2>
+          </div>
+          <div id="grop">
+            <input type="text" name="name" id="name" placeholder="Your name" />
+            <input type="text" name="email" id="email" placeholder="email" />
+          </div>
+          <div id="grop">
+            <span id="errname"></span><span id="erremail"></span>
+          </div>
+          <select
+            name="form_fields[field_1]"
+            id="form-field-field_1"
+            class="elementor-field-textual elementor-size-sm"
+            required="required"
+            aria-required="true"
+          >
+            <option value="Choose One --">Choose One --</option>
+            <option value="FULL DAY TRIP WITH PRIVATE GUIDE IN TANGIER">
+              FULL DAY TRIP WITH PRIVATE GUIDE IN TANGIER
+            </option>
+            <option value="WALKING TOURS OF TANGIER CITY WITH LUNCH">
+              WALKING TOURS OF TANGIER CITY WITH LUNCH
+            </option>
+            <option value="Walking Tours Tangier 3h">
+              Walking Tours Tangier 3h
+            </option>
+            <option value="Chefchaouen and Tetouan Tours">
+              Chefchaouen and Tetouan Tours
+            </option>
+            <option value="Tours Chefchaouen">Tours Chefchaouen</option>
+            <option value="Full day in Tangier and Asilah">
+              Full day in Tangier and Asilah
+            </option>
+          </select>
+          <div id="grop">
+            <h2>Adults</h2>
+            <h2>Child (5-14)</h2>
+            <h2>Child (< 2)</h2>
+          </div>
+          <div id="grop">
+            <input type="number" name="Adults" id="Adults" value="0" />
+            <input type="number" name="Child" id="Child" value="0" />
+            <input type="number" name="Child" id="Child" value="0" />
+          </div>
+          <div id="grop">
+            <h2>Depart</h2>
+            <h2>Return</h2>
+          </div>
+
+          <div id="grop">
+            <input type="text" name="Depart" id="Depart" />
+            <input type="text" name="Return" id="Return" />
+          </div>
+
+          <h2>Message</h2>
+          <textarea
+            class="elementor-field-textual elementor-field elementor-size-sm"
+            name="form_fields[04ad17d]"
+            id="form-field-04ad17d"
+            rows="4"
+            placeholder="Your message"
+          ></textarea>
+        </div>
+        <input type="submit" value="send" />
+      </form>
+    </div>
+  </body>
+</html>
