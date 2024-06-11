@@ -1,0 +1,16 @@
+1:modif name buton whassap =>resrves ;
+2:reserves button click => form 
+
+//               logo
+create logo:
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+html :            <a href="#" id="logo">BookM</a> 
+css: #logo{
+      font-family: "Jua", sans-serif;
+    font-style: normal;
+    color: #324977;
+    text-shadow: 0 0 1.5px #ff6828;
+    font-size: 34px;
+    }
